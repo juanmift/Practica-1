@@ -1,0 +1,33 @@
+\documentclass[11pt]{article}
+    \title{\textbf{Práctica 1, ejercicio 2}}
+    \author{Juan Miguel Fernández Tejada}
+    \date{25/10/2022}
+    
+    \addtolength{\topmargin}{-3cm}
+    \addtolength{\textheight}{3cm}
+\begin{document}
+
+\maketitle
+\thispagestyle{empty}
+
+\section{Within the folder “files”, find a TEX file in whose content appears the string
+\\usepackage\{amsthm, amsmath\}. Note: use grep and escape the special
+characters. Complete the proof and answer the question.}
+Si $\alpha,\beta,\gamma$ son expresiones regulares entonces se cumple:
+  \begin{equation}
+  (\alpha+\beta)\gamma=\alpha\gamma+\beta\gamma
+  \end{equation}
+Usando las reglas de la definición tenemos que:
+
+$$\mathcal{L}(((\alpha+\beta)\gamma))=\mathcal{L}((\alpha+\beta))\mathcal{L}(\gamma)=(\mathcal{L}(\alpha)\cup \mathcal{L}(\beta))\mathcal{L}(\gamma)=\mathcal{L}(\alpha)\mathcal{L}(\gamma)\cup \mathcal{L}(\beta)\mathcal{L}(\gamma)=$$\\
+$$\mathcal{L}(\alpha\gamma)+\mathcal{L}(\beta\gamma)=\mathcal{L}(\alpha\gamma+\beta\gamma)$$\\\\
+Consideremos $L=\{w\in \{a,b\}^* : w \textnormal{ no termina en } ab\}$. Un expresión regular que genera L es: \\
+\[\epsilon + (a + b) + (a + b)^*(aa + ba + bb)\]
+Explicación:
+\begin{itemize}
+\item $\epsilon$ genera a la cadena vacía.
+\item $(a + b)$ genera a las cadenas de longitud igual a uno.
+\item $(a + b)^*(aa + ba + bb)$ genera a cualquier cadena que tenga longitud mayor o igual a dos y que tenga cualquier terminación posible excepto $ab$.
+\end{itemize}
+\end{document}
+

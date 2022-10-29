@@ -1,0 +1,21 @@
+\documentclass[11pt]{article}
+    \title{\textbf{Práctica 1, ejercicio 1}}
+    \author{Juan Miguel Fernández Tejada}
+    \date{25/10/2022}
+    
+    \addtolength{\topmargin}{-3cm}
+    \addtolength{\textheight}{3cm}
+\begin{document}
+
+\maketitle
+\thispagestyle{empty}
+
+\section{Find the power set R³ of R = \{(1, 1), (1, 2), (2, 3), (3, 4)\}. Check your answer with the script powerrelation.m and write a LATEX document with the
+solution step by step.}
+Vayamos construyendo R³ de manera ordenada, empleando la definición. Tenemos que todos los elementos de $R$ están contenidos en $R^2$, y que como $(1, 2), (2, 3) \in R$, entonces $(1, 3) \in R^2$. De la misma manera $(2, 3), (3, 4) \in R$ luego $(2, 4) \in R^2$. Finalmente nos queda
+${R^2 = \{(1, 1), (1, 2), (2, 3), (3, 4), (1, 3), (2, 4)\}}$.\\\\
+Ahora construyamos $R^3$. Para todo $x \in A$ tal que $(a , x) \in R^2$, $(a, x) \in R^3$. Entonces $R^2 \subset R^3$. Además, $(1, 2), (2, 4) \in R^2$, por lo que $(1, 4) \in R^3$. Finalmente
+${R^3 = \{(1, 1), (1, 2), (2, 3), (3, 4), (1, 3), (2, 4), (1, 4)\}}$.
+
+\end{document}
+
